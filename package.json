@@ -1,0 +1,80 @@
+{
+  "name": "@project-kit/ts-transform-path",
+  "version": "1.0.0-rc.1",
+  "license": "MIT",
+  "description": "Transform alias path accordingly to tsconfig.json",
+  "homepage": "https://github.com/project-kit/ts-transform-path#readme",
+  "main": "esnode/plugin.js",
+  "module": "esnode/plugin.js",
+  "keywords": [
+    "path",
+    "alias",
+    "transform",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/project-kit/ts-transform-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/project-kit/ts-transform-path/issues",
+    "email": "bugs@project-kit.org"
+  },
+  "author": {
+    "name": "Dakal Oleksandr",
+    "email": "oleksandr-dakal@project-kit.org"
+  },
+  "directories": {
+    "lib": "library",
+    "test": "test"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "micromatch": "^3.1.10",
+    "semver-compare": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.0",
+    "@types/node": "^10.3.3",
+    "jest": "^23.1.0",
+    "jest-mock-console": "^0.3.5",
+    "npm-run-all": "^4.1.3",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^6.1.1",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "tslint-config-standard": "^7.0.0",
+    "ttypescript": "^1.4.6",
+    "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "tslint -p tsconfig.json -t codeFrame",
+    "build": "rimraf esnode | ttsc -p ./tsconfig.json"
+  },
+  "engines": {
+    "node": ">=9.0.0"
+  },
+  "files": [
+    "esnode",
+    "library"
+  ],
+  "prettier": {
+    "singleQuote": true
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "collectCoverageFrom": [
+      "library/**/*.ts"
+    ],
+    "collectCoverage": true
+  }
+}

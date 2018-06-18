@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "esnode",
+    "target": "es2015"
+  },
+  "include": ["library"]
+}

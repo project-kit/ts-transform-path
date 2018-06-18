@@ -1,0 +1,15 @@
+# IDE workspace
+.idea
+.vscode
+
+# NPM
+node_modules
+npm-debug.log
+.npmrc
+
+# Temporary
+tmp
+coverage
+
+# OS
+.DS_Store
